@@ -1,4 +1,4 @@
-##≤ªºÊ»›
+##‰∏çÂÖºÂÆπ
 
 ###json_decode() strictness
 	json_decode() now rejects non-lowercase variants of the JSON literals true, false and null at all times, as per the JSON specification, and sets json_last_error() accordingly. Previously, inputs to json_decode() that consisted solely of one of these values in upper or mixed case were accepted.

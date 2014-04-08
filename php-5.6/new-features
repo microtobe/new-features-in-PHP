@@ -1,4 +1,4 @@
-##пбльпт
+##Ф√╟Г┴╧Ф─╖
 
 ###Constant scalar expressions
 	It is now possible to provide a scalar expression involving numeric and string literals and/or constants in contexts where PHP previously expected a static value, such as constant and property declarations and default function arguments.
@@ -20,7 +20,7 @@
 	echo (new C)->f()."\n";
 	echo C::SENTENCE;
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	4
 	The value of THREE is 3
@@ -42,7 +42,7 @@
 	f(1, 2, 3, 4);
 	f(1, 2, 3, 4, 5);
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	$req: 1; $opt: 0; number of params: 0
 	$req: 1; $opt: 2; number of params: 0
@@ -62,7 +62,7 @@
 	$operators = [2, 3];
 	echo add(1, ...$operators);
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	6
 	
@@ -78,7 +78,7 @@
 	$a **= 3;
 	printf("a ==           %d\n", $a);
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	2 ** 3 ==      8
 	2 ** 3 ** 2 == 512
@@ -102,7 +102,7 @@
 		f();
 	}
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	42
 	Name\Space\f
@@ -156,7 +156,7 @@
 	var_dump(hash_equals($expected, $correct));
 	var_dump(hash_equals($expected, $incorrect));
 	?>
-	ртиоюЩЁл╩АйДЁЖё╨
+	Д╩╔Д╦┼Д╬▀Г╗▀Д╪ Х╬⌠Е┤╨О╪ 
 
 	bool(true)
 	bool(false)

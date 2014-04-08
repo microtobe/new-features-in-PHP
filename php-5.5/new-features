@@ -1,6 +1,6 @@
-##ĞÂÌØĞÔ
+##æ–°ç‰¹æ€§
 
-###ĞÂÔö Generators
+###æ–°å¢ Generators
 	Support for generators has been added via the yield keyword. Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.
 	A simple example that reimplements the range() function as a generator (at least for positive step values):
 	<?php
@@ -11,19 +11,19 @@
 	}
 	echo 'Single digit odd numbers: ';
 	
-	/* ×¢Òâ±£´æÔÚÄÚ´æÖĞµÄÊı×é¾ø²»»á±»´´½¨»ò·µ»Ø */ 
+	/* æ³¨æ„ä¿å­˜åœ¨å†…å­˜ä¸­çš„æ•°ç»„ç»ä¸ä¼šè¢«åˆ›å»ºæˆ–è¿”å› */ 
 	foreach (xrange(1, 9, 2) as $number) {
 		echo "$number ";
 	}
 	?>
-	ÒÔÉÏÀı³Ì»áÊä³ö£º
+	ä»¥ä¸Šä¾‹ç¨‹ä¼šè¾“å‡ºï¼š
 	Single digit odd numbers: 1 3 5 7 9 
 	
-###ĞÂÔö finally ¹Ø¼ü×Ö
+###æ–°å¢ finally å…³é”®å­—
 	try-catch blocks now support a finally block for code that should be run regardless of whether an exception has been thrown or not.
 	
-###foreach ÏÖÔÚÖ§³Ö list()
-	foreach ¿ØÖÆ½á¹¹ÏÖÔÚÖ§³ÖÍ¨¹ı list() ¹¹Ôì½«Ç¶Ì×Êı×é·ÖÀëµ½µ¥¶ÀµÄ±äÁ¿¡£ÀıÈç£º
+###foreach ç°åœ¨æ”¯æŒ list()
+	foreach æ§åˆ¶ç»“æ„ç°åœ¨æ”¯æŒé€šè¿‡ list() æ„é€ å°†åµŒå¥—æ•°ç»„åˆ†ç¦»åˆ°å•ç‹¬çš„å˜é‡ã€‚ä¾‹å¦‚ï¼š
 	<?php
 	$array = [
 		[1, 2],
@@ -33,13 +33,13 @@
 		echo "A: $a; B: $b\n";
 	}
 	?>
-	ÒÔÉÏÀı³Ì»áÊä³ö£º
+	ä»¥ä¸Šä¾‹ç¨‹ä¼šè¾“å‡ºï¼š
 	A: 1; B: 2
 	A: 3; B: 4
-	¹ØÓÚ foreach ¸üÉîÈëµÄÎÄµµ¿É²Î¿¼Ïà¹ØÊÖ²áÒ³Ãæ¡£
+	å…³äº foreach æ›´æ·±å…¥çš„æ–‡æ¡£å¯å‚è€ƒç›¸å…³æ‰‹å†Œé¡µé¢ã€‚
 
-###empty() Ö§³ÖÈÎÒâ±í´ïÊ½
-	empty() ÏÖÔÚÖ§³Ö´«ÈëÒ»¸öÈÎÒâ±í´ïÊ½£¬¶ø²»½öÊÇÒ»¸ö±äÁ¿¡£ÀıÈç£º
+###empty() æ”¯æŒä»»æ„è¡¨è¾¾å¼
+	empty() ç°åœ¨æ”¯æŒä¼ å…¥ä¸€ä¸ªä»»æ„è¡¨è¾¾å¼ï¼Œè€Œä¸ä»…æ˜¯ä¸€ä¸ªå˜é‡ã€‚ä¾‹å¦‚ï¼š
 	<?php
 	function always_false() {
 		return false;
@@ -51,7 +51,7 @@
 		echo 'This will not be printed.';
 	}
 	?>
-	ÒÔÉÏÀı³Ì»áÊä³ö£º
+	ä»¥ä¸Šä¾‹ç¨‹ä¼šè¾“å‡ºï¼š
 	This will be printed.
 	
 ###array and string literal dereferencing
@@ -64,20 +64,20 @@
 	echo 'PHP'[0];
 	echo "\n";
 	?>
-	ÒÔÉÏÀı³Ì»áÊä³ö£º
+	ä»¥ä¸Šä¾‹ç¨‹ä¼šè¾“å‡ºï¼š
 	Array dereferencing: 1
 	String dereferencing: P
 	
-###ĞÂµÄÃÜÂë¹şÏ£ API
-	A ĞÂµÄÃÜÂë¹şÏ£ API that makes it easier to securely hash and manage passwords using the same underlying library as crypt() in PHP has been added. See the documentation for password_hash() for more detail.
+###æ–°çš„å¯†ç å“ˆå¸Œ API
+	A æ–°çš„å¯†ç å“ˆå¸Œ API that makes it easier to securely hash and manage passwords using the same underlying library as crypt() in PHP has been added. See the documentation for password_hash() for more detail.
 	
 ###Apache 2.4 handler supported on Windows
 	The Apache 2.4 handler SAPI is now supported on Windows.
 	
-###¸Ä½ø GD
-	¶Ô GD À©Õ¹×öÁË¶à·½ÃæµÄ¸Ä½ø£¬°üÀ¨£º
-	·­×ªÖ§³ÖÊ¹ÓÃĞÂµÄ imageflip() º¯Êı¡£
-	¸ß¼¶²Ã¼ôÖ§³ÖÊ¹ÓÃ imagecrop() & imagecropauto() º¯Êı¡£
-	WebP µÄ¶ÁĞ´·Ö±ğÖ§³ÖÊ¹ÓÃ imagecreatefromwebp() & imagewebp() ¡£
+###æ”¹è¿› GD
+	å¯¹ GD æ‰©å±•åšäº†å¤šæ–¹é¢çš„æ”¹è¿›ï¼ŒåŒ…æ‹¬ï¼š
+	ç¿»è½¬æ”¯æŒä½¿ç”¨æ–°çš„ imageflip() å‡½æ•°ã€‚
+	é«˜çº§è£å‰ªæ”¯æŒä½¿ç”¨ imagecrop() & imagecropauto() å‡½æ•°ã€‚
+	WebP çš„è¯»å†™åˆ†åˆ«æ”¯æŒä½¿ç”¨ imagecreatefromwebp() & imagewebp() ã€‚
 	
 	
