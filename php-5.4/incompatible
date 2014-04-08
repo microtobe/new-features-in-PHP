@@ -1,0 +1,26 @@
+##不兼容
+
+	不再支持 安全模式 。任何依赖安全模式的应用在安全方面都需要进行调整。
+	移除 魔术引号 。为避免出现安全问题，依赖此特性的应用可能需要升级。 get_magic_quotes_gpc() 和 get_magic_quotes_runtime() 现在总是返回 FALSE 。 调用 set_magic_quotes_runtime() 将产生一个 E_CORE_ERROR 级别的错误。
+	register_globals 和 register_long_arrays php.ini 指令被移除。
+	调用时的引用传递 被移除。
+	break 和 continue 语句不再接受可变参数（ 比如： break 1 + foo() * $bar; ）。像类似 break 2; 这样的固定参数仍可使用。受此变化影响，不再允许出现 break 0; 和 continue 0; 。
+	在 日期与时间扩展 中，不再支持时区使用 TZ（TimeZone）环境变量设置。必须使用 date.timezone php.ini 配置选项或 date_default_timezone_set() 函数来指定时区。PHP 将不再尝试猜测时区，而是回退到“UTC”并发出一条 E_WARNING 错误。
+	非数字的字符串偏移量，比如 $a['foo'] 此处 $a 是一个字符串，现在使用 isset() 时返回 false，使用 empty() 时返回 true，并产生一条 E_WARNING 错误。偏移量类型是布尔和 null 则产生一条 E_NOTICE 错误。 数字字符串（比如 $a['2'] ）仍像以前一样运行。注意像类似 '12.3' 和 '5 foobar' 这样的偏移量将被视为非数字并产生一条 E_WARNING 错误，但因为向后兼容的原因它们会被分别转换成 12 和 5 。 注意：下列代码返回不同的结果。 $str='abc';var_dump(isset($str['x'])); // 在 PHP 5.4 或更新版本返回 false，但在 PHP 5.3 或更低版本返回 true
+	数组转换成字符串将产生一条 E_NOTICE 级别的错误，但返回的结果仍是字符串 "Array" 。
+	NULL 、FALSE 、或 一个空字符串被添加成一个对象的属性时将发出一条 E_WARNING 级别的错误，而不是 E_STRICT 。
+	现在参数名使用全局变量将会导致一个致命错误。禁止类似 function foo($_GET, $_POST) {} 这样的代码。
+	Salsa10 和 Salsa20 哈希算法 被移除。
+	当使用两个空数组作为参数时， array_combine() 现在返回 array() 而不是 FALSE 。
+	htmlentities() 将像 htmlspecialchars() 一样处理亚洲字符集，这是以前 PHP 版本的处理情况，但现在将会发出一条 E_STRICT 错误。
+	强烈建议不要再使用 eregi() ，此特性在最新版本中被移除。
+	下列关键字现在被 保留 ，且不能用于函数名或类名。
+		trait
+		callable
+		insteadof
+	
+	下列函数已从 PHP 中移除：
+		define_syslog_variables()
+		import_request_variables()
+		session_is_registered() 、 session_register() 以及 session_unregister() 
+		mysqli_bind_param() 、 mysqli_bind_result() 、 mysqli_client_encoding() 、 mysqli_fetch() 、 mysqli_param_count() 、 mysqli_get_metadata() 、 mysqli_send_long_data() 、 mysqli::client_encoding() 以及 mysqli_stmt::stmt()

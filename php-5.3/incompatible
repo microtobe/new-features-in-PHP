@@ -17,5 +17,5 @@
 
 
 	以下关键词被保留，将不能被用作函数名, 类名等。
-	goto
-	namespace
+		goto
+		namespace
